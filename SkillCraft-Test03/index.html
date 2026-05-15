@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillCraft Quiz Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-background">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="container">
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen active">
+            <div class="logo-container">
+                <div class="logo-icon">Q</div>
+            </div>
+            <h1>SkillCraft Quiz Game</h1>
+            <p>Test your knowledge with these 10 challenging questions. Some questions may have multiple correct answers
+            </p>
+            <button id="start-btn" class="btn-primary">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="quiz-meta">
+                    <span id="question-count">Question 1/10</span>
+                    <span id="score-live">Score: 0</span>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <h2 id="question-text">Question text goes here?</h2>
+                <p id="question-hint" class="hint"></p>
+                <div id="options-container" class="options-grid">
+                    <!-- Options injected here via JS -->
+                </div>
+            </div>
+
+            <div class="quiz-footer">
+                <button id="submit-btn" class="btn-primary" disabled>Submit Answer</button>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen">
+            <div class="results-header">
+                <h2>Quiz Complete!</h2>
+                <div class="score-circle">
+                    <svg viewBox="0 0 36 36" class="circular-chart">
+                        <path class="circle-bg"
+                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path id="score-circle-path" class="circle" stroke-dasharray="0, 100"
+                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <text id="final-score-text" x="18" y="20.35" class="percentage">0%</text>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="results-details">
+                <p id="results-message">Great job!</p>
+                <div class="stats">
+                    <div class="stat-box">
+                        <span class="stat-label">Correct</span>
+                        <span class="stat-value text-success" id="stat-correct">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">Incorrect</span>
+                        <span class="stat-value text-danger" id="stat-incorrect">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <button id="restart-btn" class="btn-primary">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
