@@ -14,7 +14,7 @@ const questions = [
         correctAnswers: [1]
     },
     {
-        question: "Which Git command is used to send your local code changes to a remote repository like GitHub? languages are considered the core technologies of the World Wide Web?",
+        question: "Which Git command is used to send your local code changes to a remote repository like GitHub?",
         type: "multi",
         options: ["git pull", "git fetch", "git commit", "git push"],
         correctAnswers: [3],
